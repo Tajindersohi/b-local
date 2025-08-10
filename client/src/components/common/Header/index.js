@@ -7,9 +7,7 @@ function Header() {
     <header style={headerStyle}>
       <nav style={navbarStyle}>
         <ul style={navLinksStyle}>
-          <li><Link to="/" style={linkStyle}>Home</Link></li>
-          <li><Link to="/about" style={linkStyle}>About</Link></li>
-          <li><Link to="/contact" style={linkStyle}>Contact</Link></li>
+          <li><Link to="/" style={linkStyle}>Logo</Link></li>
         </ul>
       </nav>
     </header>
