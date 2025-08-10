@@ -4,17 +4,17 @@ import ProductCard from "./ProductCard";
 function Home() {
   const [productList, setProductList] = useState([]);
   useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const response = await fetch("https://fakestoreapi.com/products");
-        const products = await response.json();
-        setProductList(products);
-      } catch (error) {
-        console.error("Failed to fetch products:", error);
-      }
-    }
     fetchProducts();
   }, []);
+   async function fetchProducts() {
+    try {
+      const response = await fetch("https://fakestoreapi.com/products");
+      const products = await response.json();
+      setProductList(products);
+    } catch (error) {
+      console.error("Failed to fetch products:", error);
+    }
+  }
   function addToCart(product) {
     window.alert(`Added "${product.title}" to cart!`);
   }
